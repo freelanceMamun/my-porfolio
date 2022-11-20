@@ -1,0 +1,112 @@
+@import '../Variable/Variable.scss';
+
+.Hero_section {
+  min-height: 450px;
+  margin-top: 4.5rem;
+  margin-bottom: 8rem;
+  position: relative;
+  .triangle {
+    position: absolute;
+    width: 40px;
+    margin-left: 2rem;
+    z-index: -1;
+  }
+  .infinte {
+    right: 2em;
+    bottom: 0;
+  }
+  .title_home {
+    font-size: $--Font-size-head;
+    font-family: $--Ralway-Font;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: $--Text-color;
+  }
+
+  .main_content_home {
+    .Subtitle {
+      font-size: $--Font-Size-Discription;
+      color: $--Text-Color-p;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      font-family: $--Roboto-Font;
+    }
+    .discription {
+      font-size: $--Font-Size-Discription;
+      font-family: $--Roboto-Font;
+      color: $--Text-Color-p;
+      font-weight: 500;
+    }
+    .contact_btn {
+      padding: 0.6rem 1.5rem;
+      border-radius: 3px;
+      @include Button;
+    }
+  }
+  .imgBox {
+    max-width: 360px;
+    margin: auto;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    img {
+      position: absolute;
+      max-width: 100%;
+      top: 30px;
+    }
+  }
+  .Scroll_btn {
+    margin-top: 3rem;
+
+    .scrollDown {
+      width: 155px;
+      margin: auto;
+      display: block;
+      font-size: 0.9rem;
+      font-family: $--Roboto-Font;
+      transition: 0.4s ease;
+      color: $--Text-Color-Menu;
+    }
+  }
+}
+
+.triangle {
+  animation: mymove infinite 15s linear;
+}
+
+@keyframes mymove {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.emoji {
+  width: 100px;
+  animation: bounce infinite 3s;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+
+  0% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}

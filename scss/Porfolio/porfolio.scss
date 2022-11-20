@@ -1,0 +1,155 @@
+@import '../Variable/Variable.scss';
+
+.Portfolio {
+  min-height: 650px;
+  position: relative;
+  ._h_title {
+    color: $--Text-color;
+  }
+  .h_subtitle {
+    color: $--Text-Color-p;
+    font-family: $--Ralway-Font;
+  }
+
+  .portfolio-Item {
+    max-width: 81%;
+    margin: auto;
+
+    .allItem_list .item_gallerylist {
+      color: $--Text-Color-Menu;
+      cursor: pointer;
+    }
+  }
+
+  .Gallery {
+    .Portfolio_img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 0.7rem auto;
+      transition: all 1s ease;
+      position: relative;
+      height: max-content;
+      .over-view {
+        transition: all 1s ease;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(54, 54, 48, 0.623);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        visibility: hidden;
+        gap: 20px;
+        a {
+          color: #fff;
+          font-size: 22px;
+        }
+      }
+      &:hover .over-view {
+        transform: scale(1);
+        visibility: visible;
+      }
+      &:hover {
+        box-shadow: 0px 15px 30px #e5e7ffd9;
+      }
+      img {
+        transition: all 1s ease;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 4px;
+        &:hover {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+}
+
+.Preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // background-color: rgba(54, 54, 48, 0.623);
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  color: #fff;
+  .PrevImage {
+    width: 700px;
+    img {
+      max-width: 100%;
+      animation: Animation 0.5s ease-in;
+    }
+  }
+  #back-fun {
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  display: none;
+  pointer-events: none;
+  visibility: hidden;
+}
+.Preview.Show-Preview {
+  display: flex;
+  visibility: visible;
+  pointer-events: fill;
+}
+
+@keyframes Animation {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.AllImage_Filter.Show {
+  display: block;
+  animation-name: ZoomAnimation;
+  animation-duration: 1.2s;
+  transition: all 1s ease;
+}
+.AllImage_Filter.hide {
+  display: none;
+}
+
+@keyframes ZoomAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .Preview.Show-Preview {
+    flex-direction: column;
+  }
+  .PrevImage {
+    max-width: 300px;
+    margin-right: 0;
+    img {
+      max-width: 100%;
+      animation: Animation 0.5s ease-in;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import '../Variable/Variable.scss';
+
+.about_mainsection {
+  .infinte {
+    top: 2rem;
+    left: 2rem;
+  }
+  .about_title {
+    color: $--Text-color;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+  .title_About {
+    font-size: 2.5rem;
+    font-family: $--Ralway-Font;
+    font-weight: 400;
+    color: $--Text-color;
+  }
+  .Subtitle {
+    font-size: 1rem;
+    color: $--Text-Color-p;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+    font-family: $--Roboto-Font;
+  }
+  .discription {
+    max-width: 500px;
+    min-height: 120px;
+    font-size: 1.1rem;
+    font-family: $--Roboto-Font;
+    font-weight: 500;
+    color: $--Text-Color-p;
+  }
+  .expriences_section {
+    font-family: $--Roboto-Font;
+    color: $--Text-Color-p;
+  }
+}

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Raleway:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Raleway:wght@100;200;300;400;500&family=Roboto+Mono:wght@100;200;300;400&display=swap');
+$--primary-color: #ba55d3;
+$--secondary-color: #9370db;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+$--Text-color: #634d4d;
+$--Text-Color-p: #4e418b;
+$--Text-Color-Menu: #242329;
+$--Hover-Color-Menu: #3d51ff;
+$--Button-Color: #d105f5;
+$--Button-Hover-Color: #9e5ef7;
+$--Icon-Color: #8644dc;
+$--brand-color: hsl(0, 0%, 100%);
+$--Servive-Hover-color: #e5e7ffd9;
+$--Menu-color: #000000d9;
+
+$--Font-Size: 1.1rem;
+$--Font-Size-Discription: 1.1rem;
+$--Font-Subtile: 0.9rem;
+$--Font-size-head: 3rem;
+
+$--Ralway-Font: 'Raleway', sans-serif;
+$--Roboto-Font: 'Roboto Mono', monospace;
+$--Poppins-Font: 'Poppins', sans-serif;
+
+@mixin Button {
+  background-image: linear-gradient(
+    to right bottom,
+    #9959f2,
+    #8954e0,
+    #7a4fce,
+    #6c4abc,
+    #5f44aa
+  );
+  color: $--brand-color;
+  font-size: $--Font-Size-Discription;
+  font-family: $--Roboto-Font;
+}
+
+@media screen and (max-width: 768px) {
+  $--Font-Size: 1.1rem;
+  $--Font-Size-Discription: 1.1rem;
+  $--Font-Subtile: 0.9rem;
+  $--Font-size-head: 3rem;
+
+
+}
+@media screen and (max-width: 540px) {
+  $--Font-Size: 1.1rem;
+$--Font-Size-Discription: 1.1rem;
+$--Font-Subtile: 0.9rem;
+$--Font-size-head: 3rem;
+
+}

@@ -1,0 +1,74 @@
+@import '../Variable/Variable.scss';
+@import '../Animation.scss';
+
+nav {
+  .MyBrandLogo {
+    width: 50px;
+    height: 50px;
+    background-color: $--Icon-Color;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $--brand-color;
+    border: 50%;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  .navbar-toggler {
+    outline: none;
+    border: none;
+  }
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+header {
+  height: 100px;
+  transition: all 0.5s ease;
+}
+.navbar {
+  background-color: $--brand-color;
+  z-index: 99;
+}
+
+header.scrolling-navbar {
+  position: sticky;
+  width: 100%;
+  height: 75px;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: $--brand-color;
+}
+
+header.scrolling-navbar .navbar {
+  background-color: $--brand-color;
+  z-index: 99;
+  box-shadow: 2px 0px 18px #dbdaefaf;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 26px;
+  height: 3px;
+  background-color: #a1a1a8;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 3px);
+  transform: rotate(-45deg) translate(-9px, 3px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-9px, -4px);
+}

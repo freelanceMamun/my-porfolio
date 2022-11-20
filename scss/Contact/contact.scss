@@ -1,0 +1,230 @@
+@import '../Variable/Variable.scss';
+
+.mainFrom {
+  background-image: linear-gradient(
+    to right bottom,
+    #9959f2,
+    #8954e0,
+    #7a4fce,
+    #6c4abc,
+    #5f44aa
+  );
+  max-width: 1000px;
+  min-height: 800px;
+  margin: auto;
+  border-radius: 3px;
+  position: relative;
+  .Contact_title {
+    color: #fff;
+  }
+  .contact_subtitle {
+    color: #fff;
+    font-family: $--Poppins-Font;
+  }
+
+  .input_section {
+    margin-bottom: 0.5rem;
+
+    i {
+      top: 45px;
+      right: 10px;
+      font-size: 13px;
+    }
+  }
+  .Contact_subHeader,
+  .From {
+    max-width: 80%;
+    margin: auto;
+  }
+  .loaction,
+  .phoneNumber,
+  .Email {
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    font-family: $--Ralway-Font;
+    color: #fff;
+    transition: all 0.8s;
+    &:hover {
+      background-color: #fff;
+      color: black;
+    }
+    i {
+      font-size: 1.8rem;
+      color: #fff;
+      transition: all 0.8s;
+      margin-bottom: 0.8rem;
+    }
+    &:hover i {
+      color: $--Button-Hover-Color;
+    }
+  }
+  .From {
+    border-radius: 8px;
+    padding: 2rem;
+    min-height: 400px;
+    background-color: #fff;
+
+    .input_section {
+      textarea,
+      input,
+      select {
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-shadow: none;
+      }
+      label {
+        font-weight: 500;
+        font-family: $--Poppins-Font;
+        color: $--Text-Color-Menu;
+      }
+      textarea {
+        resize: none;
+        height: 90px;
+      }
+    }
+    .button_section button {
+      width: 120px;
+      background-color: $--Icon-Color;
+      color: #fff;
+      margin: auto;
+      margin-top: 1rem;
+      border-radius: 3px;
+      &:hover {
+        color: #fff;
+        background-color: $--Button-Hover-Color;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 996px) {
+  .mainFrom {
+    min-height: 1100px;
+  }
+  .From {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .mainFrom {
+    min-height: 1250px;
+  }
+  .From {
+    margin-bottom: 2rem;
+  }
+}
+
+.chekBoxInner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 100%;
+  z-index: 99;
+  height: 100vh;
+  display: none;
+  pointer-events: none;
+
+  img {
+    width: 350px;
+  }
+
+  .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+
+  .checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill 0.4s ease-in-out 0.4s forwards,
+      scale 0.3s ease-in-out 0.9s both;
+  }
+
+  .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}
+.chekBoxInner.removeChekBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  pointer-events: visible;
+}
+
+@media only screen and (max-width: 768px) {
+  .chekBoxInner {
+    max-width: 100%;
+    width: 100%;
+  }
+  .chekBoxInner.removeChekBox {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .chekBoxInner {
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    img {
+      width: 95%;
+    }
+  }
+  .chekBoxInner.removeChekBox {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .mainFrom {
+    .From {
+      max-width: 95%;
+    }
+  }
+}
+.From {
+  form.ErrorForm {
+    i {
+      color: #dc3545;
+    }
+  }
+}

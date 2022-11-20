@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import './Variable/Variable.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $--brand-color;
+  overflow-x: hidden !important;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+@import './Loader/loader.scss';
+@import './Animation.scss';
+@import './navbar/navbar.scss';
+@import './HeroSection/hero.scss';
+@import './About_Section/About.scss';
+
+.service_section {
+  min-height: 500px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 80px;
+  .service_header {
+    padding-bottom: 2.9rem;
+    color: $--Text-color;
+  }
+  .service_discription {
+    font-family: $--Ralway-Font;
+  }
+}
+
+.service_content {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: 0.4s ease;
+  max-width: 340px;
+  margin: auto;
+  background: $--brand-color;
+  color: $--Text-color;
+}
+.service_content:hover {
+  box-shadow: 0px 15px 30px $--Servive-Hover-color;
+  user-select: none;
+}
+.imgBox_serb {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 70px;
+  border-radius: 50%;
+}
+.imgBox_serb img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.service-emoji {
+  animation: mymove infinite 15s linear;
+}
+.service_content h4 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: $--Text-color;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: $--Ralway-Font;
+}
+.service_content p {
+  font-size: 0.79rem;
+  text-align: center;
+  color: $--Text-Color-p;
+  font-weight: 400;
+}
+.ViewALlBtn .viewBtn {
+  width: 120px;
+  margin: auto;
+  display: block;
+  outline: none;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 3px;
+  font-size: 15px !important;
+  @include Button;
+}
+
+@keyframes mymove {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+// Work Follow style Component
+
+.Work-Follow {
+  margin-top: 5rem;
+  min-height: 400px;
+  .Work_content {
+    max-width: 1000px;
+    margin-top: 3rem;
+    margin: auto !important;
+  }
+  .Work_headTitle h2 {
+    color: $--Text-Color-Menu;
+  }
+  .Work_headTitle p {
+    color: $--Text-color;
+  }
+  .Working_Content h3 {
+    color: $--Text-Color-Menu;
+    font-family: $--Roboto-Font;
+    margin-bottom: 1rem;
+  }
+  .Working_Content p {
+    color: $--Text-Color-p;
+    font-family: $--Roboto-Font;
+  }
+  .Working_Content .Choosebtn {
+    border-radius: 3px;
+    @include Button;
+  }
+
+  .accordion-button::after {
+    background-image: none !important;
+  }
+  .accordion-flush .accordion-item {
+    border: none !important;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none !important;
+  }
+
+  #flush-headingOne {
+    border-left: 4px solid #ebbd86 !important;
+  }
+
+  #flush-headingOne button {
+    background: hsl(28, 100%, 97%) !important;
+  }
+  #flush-collapseOne {
+    border-left: 4px solid hsl(33, 72%, 72%) !important ;
+    background: hsla(29, 100%, 96%, 0.329) !important;
+  }
+
+  #flush-headingTwo {
+    border-left: 4px solid hsl(241, 92%, 74%) !important ;
+  }
+  #flush-headingTwo button {
+    background-color: hsl(252, 100%, 94%) !important;
+  }
+  #flush-collapseTwo {
+    border-left: 4px solid hsl(241, 92%, 74%) !important ;
+    background: hsla(254, 100%, 94%, 0.341) !important;
+  }
+  #flush-headingThree {
+    border-left: 4px solid hsl(0, 84%, 75%);
+  }
+
+  #flush-headingThree button {
+    background-color: #ffe2e2 !important;
+  }
+  #flush-collapseThree {
+    border-left: 4px solid #f58b8b;
+    background-color: #ffdcdc45 !important;
+  }
+  #flush-headingFour {
+    border-left: 4px solid #f47aff;
+  }
+  #flush-headingFour button {
+    background-color: #ffe3fcc4 !important;
+  }
+  #flush-collapseFour {
+    border-left: 4px solid #f47aff;
+    background-color: #ffe2fc45 !important;
+  }
+}
+
+@import './Skill/skill.scss';
+
+.freelance-Secton {
+  background-image: url(../image/back.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 100%;
+  text-align: center;
+  background-size: cover;
+  position: relative;
+  .overlay {
+    background-color: hsla(250, 8%, 15%, 0.557);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .content-freelaching {
+    position: relative;
+    color: rgb(255, 255, 255);
+    padding: 4rem;
+
+    h2 {
+      font-family: $--Poppins-Font;
+      font-size: 1.8rem;
+    }
+    p {
+      font-family: $--Roboto-Font;
+      font-size: 0.8rem;
+    }
+    a {
+      width: 160px;
+      font-family: $--Roboto-Font;
+      background-color: $--Icon-Color;
+      color: #fff;
+    }
+  }
+}
+
+@import './Contact/contact.scss';
+// Happy  Client
+.Clint_section {
+  min-height: 500px;
+  margin-top: 2rem;
+  .review_img {
+    max-width: 600px;
+    margin: auto;
+    video {
+      max-width: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  p {
+    font-family: $--Ralway-Font;
+  }
+  .review_item {
+    position: relative;
+    max-width: 460px;
+    margin: auto;
+    background: #fff;
+    border-radius: 4px;
+    padding: 1rem;
+    .test_avater {
+      position: absolute;
+      left: 50%;
+      top: 5px;
+      width: 90px;
+      height: 90px;
+      margin-left: -45px;
+      z-index: 20;
+    }
+  }
+  .ReviewText- {
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  .test_avater img {
+    width: 90px;
+    height: 90px;
+    float: left;
+    border-radius: 100%;
+    border: 6px solid #fff;
+    box-shadow: 0 9px 26px rgb(58 87 135 / 10%);
+  }
+  .Test-molial-Text-before {
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    color: #fff;
+    opacity: 0.3;
+    font-size: 35px;
+    transition: all 400ms linear;
+    top: 25px;
+    left: 30px;
+  }
+  .line {
+    height: 2px;
+    background: $--Icon-Color;
+    width: 100px;
+    display: inline-block;
+  }
+  .review_header {
+    margin-bottom: 2rem;
+  }
+  .review_header h3 {
+    margin: 0 !important;
+    padding-top: 1rem;
+    color: $--Text-Color-Menu;
+  }
+
+  .Review-name,
+  .Review-name p {
+    font-family: $--Roboto-Font;
+    color: $--Text-Color-p;
+  }
+  .ReviewText- .star {
+    color: $--Button-Hover-Color;
+  }
+  .ReviewText- .text {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: $--Text-Color-p;
+  }
+  #prevBtn {
+    position: absolute;
+    top: 55%;
+
+    outline: none;
+    color: $--Button-Hover-Color;
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 29;
+    left: 3%;
+  }
+
+  #nextBtn {
+    position: absolute;
+    top: 54%;
+    background-color: transparent;
+    color: $--Button-Hover-Color;
+    outline: none;
+
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    z-index: 29;
+    right: 1%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .ReviewText- .text {
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  .swiper {
+    padding-left: 0.4rem;
+  }
+
+  .mySwiper {
+    #nextBtn {
+      top: 57%;
+    }
+    #prevBtn {
+      top: 58%;
+    }
+  }
+  .ReviewText- .text {
+    padding: 2.2rem;
+  }
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: '';
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: '';
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $--Button-Hover-Color;
+  border-radius: 0.5rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: $--Icon-Color;
+}
+
+@import './Porfolio/porfolio.scss';
+
+@import './Footer/footer.scss';
+
+@media screen and (max-width: 540px) {
+  header {
+    width: 100%;
+  }
+  section {
+    width: 95%;
+    margin: auto;
+  }
+  .container {
+    width: 100%;
+  }
+  video {
+    width: 100%;
+  }
+  .content-freelaching {
+    h2 {
+      text-align: initial;
+    }
+    p {
+      text-align: initial;
+    }
+  }
+}

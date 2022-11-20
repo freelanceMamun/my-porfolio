@@ -1,0 +1,94 @@
+.shape {
+  animation: morph 2s ease-in-out infinite;
+  height: 50px;
+  transition: all 1s ease-in-out;
+  width: 50px;
+}
+
+// .shape {
+//   animation: morph 2s ease-in-out infinite;
+//   /* border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; */
+//   height: 50px;
+//   transition: all 1s ease-in-out;
+//   width: 50px;
+// }
+.shap2 {
+  background-image: linear-gradient(
+    to left bottom,
+    #9e5ef7,
+    #9959f2,
+    #9555ed,
+    #9050e8,
+    #8c4be3,
+    #8449da,
+    #7c47d2,
+    #7545c9,
+    #6945ba,
+    #5f44aa,
+    #56439b,
+    #4e418b
+  );
+  animation: morph 3s ease-in-out infinite;
+  min-height: 50px;
+  transition: all 4s ease-in-out;
+  max-width: 50px;
+  margin: auto;
+}
+
+.Shep3 {
+  background-image: linear-gradient(
+    to left bottom,
+    #9e5ef7,
+    #9959f2,
+    #9555ed,
+    #9050e8,
+    #8c4be3,
+    #8449da,
+    #7c47d2,
+    #7545c9,
+    #6945ba,
+    #5f44aa,
+    #56439b,
+    #4e418b
+  );
+  animation: morph 5s ease-in-out infinite;
+  min-height: 360px;
+  transition: all 4s ease-in-out;
+  max-width: 360px;
+  margin: auto;
+}
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 50% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.Scroll_btn .scrollDown .fa-arrow-down {
+  animation: downanimaton 1s ease-in infinite;
+}
+
+@keyframes downanimaton {
+  0% {
+    transform: translateY(0px);
+    transition: all 1s ease-in;
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(5px);
+    transition: all 1s ease-in;
+    opacity: 5;
+  }
+  100% {
+    transform: translateY(10px);
+    transition: all 1s ease-in;
+    opacity: 1;
+  }
+}

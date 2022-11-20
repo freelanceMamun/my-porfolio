@@ -1,0 +1,113 @@
+@import '../Variable/Variable.scss';
+
+#skills {
+  min-height: 500px;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  padding-top: 80px;
+}
+.skill_main_container {
+  max-width: 1000px !important;
+  margin: auto !important;
+}
+.FontEnd_skill {
+  max-width: 390px;
+  margin: auto;
+}
+
+.Front-head {
+  max-width: 390px;
+  cursor: pointer;
+}
+.Front-head i {
+  color: $--Button-Hover-Color;
+}
+
+.Skill_title {
+  flex-basis: 75% !important;
+  font-family: $--Poppins-Font;
+}
+.Skill_title h5 {
+  margin-bottom: 0 !important;
+  color: $--Text-Color-Menu;
+}
+.Skill_title span {
+  color: $--Text-Color-p;
+}
+.skills_list {
+  display: grid;
+  gap: 1.5rem;
+  row-gap: 1.5rem;
+  height: 0 !important;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transition: all 2s;
+  user-select: none;
+}
+
+.FontEnd_skill.skills__open .skills_list {
+  height: max-content !important;
+  opacity: 1;
+}
+
+.FontEnd_skill.skills__open .Front-head .fa-angle-down {
+  transform: rotate(180deg);
+  transition: all 0.4s;
+}
+
+.skill_title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.skill_title .skill-name {
+  color: $--Text-Color-Menu;
+  font-family: $--Roboto-Font;
+}
+.skill_title i {
+  color: $--Button-Hover-Color;
+  font-size: 1.3rem !important;
+}
+.Skill-data .skill_number {
+  color: $--Text-Color-Menu;
+  font-family: var(--Roboto-Font);
+}
+.Skill-data .skill_bar {
+  background-color: hsl(264, 61%, 85%);
+  height: 5px;
+  border-radius: 0.25rem;
+}
+
+.skill_percentage {
+  display: block;
+  background-color: $--Button-Hover-Color;
+  height: 5px;
+  border-radius: 0.25rem;
+}
+.skill_bar .Javascript {
+  width: 70%;
+}
+.skill_bar .CSS {
+  width: 90%;
+}
+.skill_bar .nodeJS {
+  width: 70%;
+}
+.skill_bar .php {
+  width: 75%;
+}
+.skill_bar .python {
+  width: 60%;
+}
+.skill_bar .Firebase {
+  width: 90%;
+}
+
+.skill_header .skill-title {
+  color: $--Text-color;
+}
+
+.skill_header span {
+  color: $--Text-Color-p;
+}
